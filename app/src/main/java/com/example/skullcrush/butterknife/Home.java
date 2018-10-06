@@ -57,9 +57,11 @@ public class Home extends Fragment {
 
     @OnClick(R.id.button3)
     public void onButton3Clicked() {
+        MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment,new DeleteUser()).addToBackStack(null).commit();
     }
 
     @OnClick(R.id.button4)
     public void onButton4Clicked() {
+        MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment,new Update()).addToBackStack(null).commit();
     }
 }
